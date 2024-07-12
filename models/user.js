@@ -7,7 +7,7 @@ const userSchema = mongoose.Schema({
     password : { type : String, required : true}
 })
 
+// Plugin Mongoose utilisé pour garantir l'unicité des e-mails et signaler les erreurs
 userSchema.plugin(uniqueValidator);
-
 
 module.exports = mongoose.model('User', userSchema);
